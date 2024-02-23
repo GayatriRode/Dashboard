@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <div class="wrapper">
+       <div class="div-header">
+          <div class="items">
+            <input type="text" placeholder="Search.." style="border-radius: 10px;">
+          </div>
+
+          <div class="items">
+
+          </div>
+
+            <div class="items">
+                <img src="assets/bell.png" alt="Notifications" height="25">
+            </div>
+
+            <div class="items">
+                <img src="assets/email.png" alt="Messages" height="25">
+            </div>
+
+            <div class="items">
+                <img src="assets/profile.jpeg" alt="Profile" height="35" class="profile-img">
+            </div>
+
+            <div class="items">
+                Gayatri
+            </div>    
+        </div>
+
+        <div class="outer">
+          <div class="inner">
+            <nav id="sidebar">
+                <ul class="list-unstyled components">
+                    <li>
+                        <img src="assets/logo.jpeg" height="30" style="padding-left: 10px;"><span class="heading">ZEAL</span>
+                    </li>
+
+                    <li class="active">
+                        <a href="#homeSubmenu" ><img src="assets/dashboards.png" class="icons">Dashboard<img src="assets/next.png" height="20"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/calendar.png" class="icons">Event Management<img src="assets/next.png" class="text-white" height="20"></a>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu"><img src="assets/teachings.png" class="icons">Professors<img src="assets/next.png" class="text-white" height="20"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/study.png" class="icons">Students<img src="assets/next.png" class="text-white" height="20"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/online-learning.png" class="icons">Courses<img src="assets/next.png" class="text-white" height="20"></a>
+                    </li>
+        
+                    <li>
+                        <a href="#"><img src="assets/book.png" class="icons">Library<img src="assets/next.png" class="text-white" height="20"></a>
+                    </li>
+        
+                    <li>
+                        <a href="#"><img src="assets/department.png" class="icons">Departments<img src="assets/next.png" class="text-white" height="20"></a>
+                    </li>
+        
+                    <li>
+                        <a href="#"><img src="assets/multiple-users-silhouette.png" class="icons">Staff<img src="assets/next.png" class="text-white" height="20"></a>
+                    </li>
+        
+                    <li>
+                        <a href="#"><img src="assets/holiday.png" class="icons">Holiday<img src="assets/next.png" class="text-white" height="20"></a>
+                    </li>
+        
+                    <li>
+                        <a href="#"><img src="assets/email.png" class="icons">Email<img src="assets/next.png" class="text-white" height="20"></a>
+                    </li>
+                </ul>
+        
+            </nav>
+         </div>
+        </div>
+
+            <h3>Dashboard</h3>
+            <div class="box text-center">
+                <div>
+
+                </div>
+
+                <div class="card bg bg-primary">
+                    <img class="card-img-top pt-2" src="assets/study.png" alt="Card image cap" height="80">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Total Students</h5>
+                        <h4 class="text-white">600</h4>
+                    </div>
+                </div>
+
+                <div class="card bg-warning">
+                    <img class="card-img-top pt-2" src="assets/multiple-users-silhouette.png" alt="Card image cap" height="80">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">New Students</h5>
+                        <h4 class="text-white">50</h4>
+                    </div>
+                </div>
+
+                <div class="card bg-success">
+                    <img class="card-img-top pt-2" src="assets/online-learning.png" alt="Card image cap" height="80">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Total Courses</h5>
+                        <h4 class="text-white">6</h4>
+                    </div>
+                </div>
+
+                <div class="card bg-danger">
+                    <img class="card-img-top pt-2" src="assets/money.png" alt="Card image cap" height="80">
+                    <div class="card-body">
+                        <h5 class="card-title">Fees Collection</h5>
+                        <h4>451K</h4>
+                    </div>
+                </div>
+            </div>
+
+
+            <br>
+            <div class="graphs">
+                <div class="graph1">
+
+                </div>
+
+                <div class="graph1">
+                  <canvas id="myChart" style="width:100%;"></canvas>
+                </div>
+
+                <div class="graph1">
+                  <canvas id="myChart1" style="width:100%;"></canvas>
+                </div>
+            </div>
+            <br><br>
+
+        <div class="lists">
+            <div class="box1">
+
+            </div>
+
+            <div class="box1">
+                <h3 class="stud-list">New Student List</h3>
+                <table class="table table-bordered" width="100%">
+                    <tr>
+                        <th>Name</th>
+                        <th>Contact</th>
+                        <th>Course</th>
+                        <th>Date of admission</th>
+                        <th>Fees Paid</th>
+                        <th>Edit</th>
+                    </tr>
+  
+                    <tr>
+                        <td>Gayatri Rode</td>
+                        <td>98652311458</td>
+                        <td>MCA</td>
+                        <td>01/01/2022</td>
+                        <td>Paid</td>
+                        <td><img src="assets/circle.png" height="25" alt="">   <img src="assets/bin.png" height="25" alt=""></td>
+                    </tr>
+
+                    <tr>
+                        <td>Arpita Kadu</td>
+                        <td>7845129630</td>
+                        <td>MCA</td>
+                        <td>05/01/2022</td>
+                        <td>Unpaid</td>
+                        <td><img src="assets/circle.png" height="25" alt="">   <img src="assets/bin.png" height="25" alt=""></td>
+                    </tr>
+
+                    <tr>
+                        <td>Abhishek Karpe</td>
+                        <td>9988774455</td>
+                        <td>MCA</td>
+                        <td>06/01/2022</td>
+                        <td>Paid</td>
+                        <td><img src="assets/circle.png" height="25" alt="">   <img src="assets/bin.png" height="25" alt=""></td>
+                    </tr>
+
+                    <tr>
+                        <td>Pooja Jadhav</td>
+                        <td>9966332255</td>
+                        <td>MCA</td>
+                        <td>06/01/2022</td>
+                        <td>Unpaid</td>
+                        <td><img src="assets/circle.png" height="25" alt="">   <img src="assets/bin.png" height="25" alt=""></td>
+                    </tr>
+
+                    <tr>
+                        <td>Siddhesh Jadhav</td>
+                        <td>9955112233</td>
+                        <td>MCA</td>
+                        <td>06/01/2024</td>
+                        <td>Unpaid</td>
+                        <td><img src="assets/circle.png" height="25" alt="">   <img src="assets/bin.png" height="25" alt=""></td>
+                    </tr>
+
+                    <tr>
+                        <td>Kiran Kamble</td>
+                        <td>7755884499</td>
+                        <td>MCA</td>
+                        <td>07/01/2022</td>
+                        <td>Paid</td>
+                        <td><img src="assets/circle.png" height="25" alt="">   <img src="assets/bin.png" height="25" alt=""></td>
+                    </tr>
+
+                    <tr>
+                        <td>Pranjal Rodge</td>
+                        <td>8846529807</td>
+                        <td>MCA</td>
+                        <td>01/01/2022</td>
+                        <td>Unpaid</td>
+                        <td><img src="assets/circle.png" height="25" alt="">   <img src="assets/bin.png" height="25" alt=""></td>
+                    </tr>
+
+                    <tr>
+                        <td>Niranjanee Chougale</td>
+                        <td>7845123265</td>
+                        <td>MCA</td>
+                        <td>05/01/2022</td>
+                        <td>Paid</td>
+                        <td><img src="assets/circle.png" height="25" alt="">   <img src="assets/bin.png" height="25" alt=""></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="box1">
+
+            </div>
+
+            <div class="box1">
+                <h3 class="stud-list">Teachers List</h3>
+                <table class="table table-bordered text-center" width="100%">
+                    <tr>
+                        <th>Sr.No</th>
+                        <th>Name</th>
+                        <th>Contact</th>
+                        <th>Department</th>
+                        <th>Email</th>
+                        <th>Subject</th>
+                        <th>Edit</th>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Rupali Pawar</td>
+                        <td>7845123265</td>
+                        <td>MCA</td>
+                        <td>rupali.pawar.zeal@gmail.com</td>
+                        <td>DSA</td>
+                        <td><img src="assets/circle.png" height="25" alt="">   <img src="assets/bin.png" height="25" alt=""></td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Pravin Suryawanshi</td>
+                        <td>9685741245</td>
+                        <td>MCA</td>
+                        <td>pravin.suryawanshi.zeal@gmail.com</td>
+                        <td>DevOps</td>
+                        <td><img src="assets/circle.png" height="25" alt="">   <img src="assets/bin.png" height="25" alt=""></td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Kirti Samrit</td>
+                        <td>7889655441</td>
+                        <td>MCA</td>
+                        <td>kirti.samrit.zeal@gmail.com</td>
+                        <td>Networking</td>
+                        <td><img src="assets/circle.png" height="25" alt="">   <img src="assets/bin.png" height="25" alt=""></td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>B. J. Mohite</td>
+                        <td>9663322558</td>
+                        <td>MCA</td>
+                        <td>mohite.zeal@gmail.com</td>
+                        <td>Indian Constitution</td>
+                        <td><img src="assets/circle.png" height="25" alt="">   <img src="assets/bin.png" height="25" alt=""></td>
+                    </tr>
+            </div>
+        </div>
+
+    <!--End of wrapper class-->
+    </div>
+
+<script>
+    const xValues = ["MCA", "MBA", "Diploma", "Engineering", "Polytechnic"];
+    const yValues = [55, 49, 44, 24, 50];
+    const barColors = ["red", "green","blue","orange","brown"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Students enrolled in Courses"
+    }
+  }
+});
+
+
+    const years = [2019,2020,2021,2022,2023,2024] ;
+    const stud = [155,170,185,189,190,200]
+    const col = ["#0000ff","#add8e6","#4169e1","#87cefa","#6495ed","#87ceeb"];
+
+new Chart("myChart1", {
+  type: "pie",
+  data: {
+    labels: years,
+    datasets: [{
+      backgroundColor: col,
+      data: stud
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Admissions Yearly"
+    }
+  }
+});
+</script>
+</body>
+</html>

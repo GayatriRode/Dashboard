@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading{
+    height: 50px;
+    padding-left: 5px;
+    font-weight: bolder;
+}
+
+.div-header{
+    display: grid;
+    grid-template-columns: 240px 800px 50px 50px 50px 50px;
+    padding-top: 30px;
+    gap: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.outer{
+    display: grid;
+    grid-template-columns: 250px 900px;
+}
+
+#sidebar{
+    width: 240px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 100vh;
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
+    line-height: 4rem;
+  }
+
+.profile-img{
+    border-radius: 90%;
+}
+
+
+#sidebar a{
+    padding-left: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.icons{
+    height: 40px;
+    padding: 10px;
+    color: white;
+}
+
+.box{
+    display: grid;
+    grid-template-columns: 280px 250px 250px 250px 250px;
+    gap: 1%;
+}
+
+.graphs{
+    display: grid;
+    grid-template-columns: 280px 550px 550px;
+}
+
+.lists{
+    display: grid;
+    grid-template-columns: 280px 1000px;
+    background-color: #b0c4de;
+    font-family: 'Poor Story', system-ui;
+}
+
+.stud-list{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer{
+    background-color: midnightblue;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
